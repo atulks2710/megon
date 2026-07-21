@@ -1,0 +1,359 @@
+/* CSS Variables for Pastel Maximalist Palette & Material You Shapes */
+:root {
+    --bg-color: #fbf5ee;
+    --text-dark: #2b1c1c;
+    
+    /* Pastel Eye-Catchy Colors */
+    --pastel-pink: #ffc2d4;
+    --pastel-green: #b9fbc0;
+    --pastel-lavender: #c8b6ff;
+    --pastel-yellow: #fdf0a6;
+    --pastel-blue: #a3c4f3;
+    
+    /* Craft & Material You Elements */
+    --border-radius-large: 40px;
+    --border-radius-pill: 50px;
+    --border-radius-crafty: 40px 10px 40px 10px; /* Looks like a cut fabric scrap */
+    --shadow-heavy: 8px 8px 0px rgba(43, 28, 28, 0.15);
+    --dashed-border: 3px dashed var(--text-dark); /* Mimics stitching */
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Buttons (Crafty Theme) */
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: var(--dashed-border);
+    border-radius: var(--border-radius-pill);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 4px 4px 0px rgba(43, 28, 28, 0.1);
+}
+
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(43, 28, 28, 0.2);
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--pastel-blue);
+    border-bottom: var(--dashed-border);
+    border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(163, 196, 243, 0.4);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+    text-transform: lowercase;
+}
+
+.login-btn {
+    background-color: var(--pastel-yellow);
+}
+
+/* Hamburger Menu & Navigation */
+.hamburger {
+    background: var(--pastel-pink);
+    border: var(--dashed-border);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 20px;
+    height: 3px;
+    background-color: var(--text-dark);
+    border-radius: 5px;
+}
+
+/* Hovering over the hamburger reveals the menu (CSS only interaction) */
+.header-left:hover .side-nav {
+    display: block;
+}
+
+.side-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 5%;
+    background-color: var(--bg-color);
+    border: var(--dashed-border);
+    border-radius: var(--border-radius-crafty);
+    padding: 20px;
+    box-shadow: var(--shadow-heavy);
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background 0.2s;
+}
+
+.side-nav ul li a:hover {
+    background-color: var(--pastel-green);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 100px 5%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: var(--border-radius-crafty);
+    border: var(--dashed-border);
+}
+
+.badge {
+    display: inline-block;
+    background: var(--pastel-lavender);
+    padding: 8px 16px;
+    border-radius: var(--border-radius-pill);
+    font-weight: 700;
+    border: 2px solid var(--text-dark);
+    margin-bottom: 20px;
+    transform: rotate(-3deg);
+}
+
+.hero h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: var(--pastel-pink);
+    text-shadow: 2px 2px 0px var(--text-dark);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background-color: var(--pastel-green);
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* Abstract Floating Craft Shapes */
+.shape {
+    position: absolute;
+    z-index: 1;
+    border: var(--dashed-border);
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    background-color: var(--pastel-yellow);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    top: 20px;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 250px;
+    height: 150px;
+    background-color: var(--pastel-pink);
+    border-radius: var(--border-radius-pill);
+    bottom: 20px;
+    right: 5%;
+    transform: rotate(15deg);
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Marquee */
+.marquee {
+    background-color: var(--text-dark);
+    color: var(--pastel-green);
+    padding: 15px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-top: 5px solid var(--pastel-pink);
+    border-bottom: 5px solid var(--pastel-pink);
+    transform: rotate(-1deg);
+    margin: 40px -10px;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Product Showcase Grid */
+.product-showcase {
+    padding: 60px 5%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Card Styling (Material You meets Scrappy Craft) */
+.product-card {
+    border: var(--dashed-border);
+    border-radius: var(--border-radius-crafty);
+    padding: 20px;
+    box-shadow: var(--shadow-heavy);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.pastel-pink { background-color: var(--pastel-pink); }
+.pastel-green { background-color: var(--pastel-green); }
+.pastel-lavender { background-color: var(--pastel-lavender); }
+.pastel-yellow { background-color: var(--pastel-yellow); }
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+    border: 3px solid var(--text-dark);
+    aspect-ratio: 1 / 1;
+    margin-bottom: 20px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--bg-color);
+    padding: 5px 12px;
+    border: 2px solid var(--text-dark);
+    border-radius: var(--border-radius-pill);
+    font-weight: bold;
+    transform: rotate(5deg);
+}
+
+.tag-sale {
+    background-color: var(--pastel-pink);
+    color: var(--text-dark);
+}
+
+.card-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+strike {
+    color: rgba(43, 28, 28, 0.6);
+    font-size: 1rem;
+}
+
+.buy-btn {
+    background-color: var(--bg-color);
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+
+    .hero-content {
+        padding: 30px;
+    }
+
+    .shape {
+        display: none; /* Reduce chaos on small screens */
+    }
+}
